@@ -1,0 +1,12 @@
+Blurdemo
+========
+
+A-buffer motion blur demo
+
+Use mouse buttons to toggle settings (mouse left=blur, mouse right=speed)
+blur = 0: no motion blur
+blur = 1: assumes perfect eye-tracking
+blur = 2: assumes fixed eye (shutter behaviour)
+
+You will need the GLUT <http://www.opengl.org/resources/libraries/glut/>  libraries to compile this program. 
+
