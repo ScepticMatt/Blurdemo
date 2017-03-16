@@ -1,7 +1,10 @@
 Blurdemo
 ========
 
-A-buffer motion blur demo
+A-buffer motion blur demo. 
+
+========
+How to use:
 
 Use mouse buttons to toggle settings (mouse left=blur, mouse right=speed)
 blur = 0: no motion blur
@@ -10,3 +13,27 @@ blur = 2: assumes fixed eye (shutter behaviour)
 
 You will need the GLUT <http://www.opengl.org/resources/libraries/glut/>  libraries to compile this program. 
 
+========
+Introduction:
+The human eye has a limited sampling rate called critical flicker fusion(CFF),
+highly depending on viewing conditions such as object brightness, size and periphery,
+
+CFF(E,L,d, p) ~= (0.24E + 10.5)(Log L+log p + 1.39 Log d - 0.0426E + 1.09) (Hz)
+E = eccentricity in degrees
+L = eye luminance in Troland, 
+d = stimulus diameter in degree
+p = pupil area in mm2
+
+(Poggel et al, 2006)
+
+Objects shown on computer screens are typically time descrete, at 24, 30 or 60 Hz.(1)
+The interaction between object update rate and CFF results in various artifacts
+such as strobing, ghosting or the phantom array effect amongst others.
+These efects can be seen up to 10,000 Hz (ASSIST, 2005), 
+or 700 Hz in typical TV viewing conditions (EBU/2015)
+
+A more practical sultion is to use Motion blur (i.e. temporal anti-aliasing),
+If the update rate satisfies the Nyquist limit and eye movement is known,
+'perfect' motion(1) is achieveable without the high rate requirement mentioned above.
+
+(1) assumes display persistence is shorter than 1/CFF, otherwise persistence blur is introduced.
