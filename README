@@ -28,11 +28,10 @@ p = pupil area in mm2
 
 Objects shown on computer screens are typically time descrete, at 24, 30 or 60 Hz.(1)
 The interaction between object update rate and CFF results in various artifacts
-such as strobing, ghosting or the phantom array effect amongst others.
-These efects can be seen up to 10,000 Hz (ASSIST, 2005), 
-or 700 Hz in typical TV viewing conditions (EBU/2015)
+such as strobing, ghosting or the phantom array effect.
+These efects can be seen up to 10,000 Hz (ASSIST, 2005) or 700 Hz in TV viewing conditions (EBU/2015)
 
-A more practical sultion is to use Motion blur (i.e. temporal anti-aliasing),
+A more practical solution is to use Motion blur (i.e. temporal anti-aliasing),
 If the update rate satisfies the Nyquist limit and eye movement is known,
 'perfect' motion(1) is achieveable without the high rate requirement mentioned above.
 
